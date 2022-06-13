@@ -41,7 +41,7 @@ export class CountriesService {
     );
   }
   getContinent(continent: string) {
-    return this.http.get(`${this.baseurl}continent/${continent}`)
+    return this.http.get(`${this.baseurl}region/${continent}`)
     .pipe(
       catchError((error: HttpErrorResponse) => {
         if (error.status === HttpStatusCode.InternalServerError) {

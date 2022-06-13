@@ -116,7 +116,7 @@ fdescribe('CountriesService', () => {
           ],
           "cioc": "AFG",
           "independent": true
-      }
+        }
       ]
       service.getCountries()
       .subscribe(data => {
@@ -425,7 +425,7 @@ fdescribe('CountriesService', () => {
         expect(data).toEqual(mockData);
         doneFn()
       });
-      const url = `${environment.API_URL}continent/${continent}`;
+      const url = `${environment.API_URL}region/${continent}`;
       const req = httpController.expectOne(url);
       req.flush(mockData);
       expect(req.request.method).toEqual('GET');
@@ -444,7 +444,7 @@ fdescribe('CountriesService', () => {
           doneFn();
         }
       });
-      const url = `${environment.API_URL}continent/${continent}`;
+      const url = `${environment.API_URL}region/${continent}`;
       const req = httpController.expectOne(url);
       req.flush(msgError, mockError);
     });
@@ -462,7 +462,7 @@ fdescribe('CountriesService', () => {
           doneFn();
         }
       });
-      const url = `${environment.API_URL}continent/${continent}`;
+      const url = `${environment.API_URL}region/${continent}`;
       const req = httpController.expectOne(url);
       req.flush(msgError, mockError);
     });
@@ -480,7 +480,7 @@ fdescribe('CountriesService', () => {
           doneFn();
         }
       });
-      const url = `${environment.API_URL}continent/${continent}`;
+      const url = `${environment.API_URL}region/${continent}`;
       const req = httpController.expectOne(url);
       req.flush(msgError, mockError);
     });

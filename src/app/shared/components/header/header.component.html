@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="content cc" [class.dkHeader]="isDark">
+  <div class="header">
+    <h1>Where in the world</h1>
+    <div class="change" (click)="changeMode()">
+      <span class="material-symbols-outlined">
+        dark_mode
+        </span>
+      <p>Dark Mode</p>
+    </div>
+  </div>
+</div>

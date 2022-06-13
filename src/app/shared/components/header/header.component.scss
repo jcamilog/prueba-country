@@ -1,0 +1,18 @@
+.content {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .change {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    p {
+      margin-left: 10px;
+    }
+  }
+  &.cc {
+    border-bottom: 1px solid rgba(179, 169, 169, 0.5);
+  }
+}

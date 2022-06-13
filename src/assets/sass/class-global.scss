@@ -1,0 +1,78 @@
+@import './colors.scss';
+
+.content {
+  padding: 16px;
+}
+.dkHeader {
+  background: $darkModeElements!important;
+  &.cc {
+    border: none!important;
+  }
+  h1,
+  h2,
+  h4,
+  p {
+    color: $darkModeText;
+  }
+  .change {
+    span {
+      color: #fff;
+    }
+  }
+}
+.dark {
+  background-color: $darkModeBackground;
+  .grid {
+    .card {
+      border: none!important;
+      background: $darkModeElements!important;
+      box-shadow: none!important;
+    }
+  }
+  .filters {
+    .search {
+      input{
+        background: $darkModeElements!important;
+        box-shadow: none!important;
+        border: none!important;
+      }::placeholder {
+        color: $darkModeText;
+      }
+      span {
+        color: $darkModeText;
+      }
+    }
+    .filter {
+      .panel {
+        background: $darkModeElements!important;
+        box-shadow: none!important;
+        border: none!important;
+        span {
+          color: $darkModeText;
+        }
+      }
+      .expancion {
+        background: $darkModeElements!important;
+        box-shadow: none!important;
+        border: none!important;
+      }
+    }
+  }
+  h1,
+  h2,
+  h4,
+  p {
+    color: $darkModeText;
+  }
+}
+h2 {
+  font-size: 20px;
+}
+h1 {
+  margin: 0;
+}
+h4, p {
+  margin:  0;
+  font-size: 15px;
+}
+

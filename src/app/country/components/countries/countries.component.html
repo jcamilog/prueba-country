@@ -1,2 +1,44 @@
-<app-header></app-header>
-<p>countries works!</p>
+<div class="content" [class.dark]="isDark" >
+  <div class="filters">
+    <div class="search">
+      <span class="material-symbols-outlined">
+        search
+      </span>
+      <input type="text" placeholder="Search for a conuntry..."  name="search" [(ngModel)]="searchCountries">
+    </div>
+    <div class="filter">
+      <div class="panel" (click)="expancion()">
+        <p>filter by Region</p>
+        <span class="material-symbols-outlined">
+          {{isExpancion ? 'expand_less' : 'expand_more'}}
+        </span>
+      </div>
+      <div class="expancion" *ngIf="isExpancion">
+        <p *ngFor="let continent of continents" (click)="getCountriesByContinent(continent.name)">
+          {{continent.name}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card" *ngFor="let country of countries | search:searchCountries">
+      <div class="image">
+        <img [src]="country.flags.svg" alt="">
+      </div>
+      <div class="content-card">
+        <h2> {{country.name}} </h2>
+        <div class="card-info">
+          <span>
+            <h4>Population:</h4> <p> {{country.population}} </p>
+          </span>
+          <span>
+            <h4>Region:</h4> <p> {{country.region}} </p>
+          </span>
+          <span>
+            <h4>Capital:</h4> <p> {{country.capital}} </p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

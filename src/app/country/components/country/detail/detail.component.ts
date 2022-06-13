@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { CountriesService } from '@core/service/countries.service';
+import { ChangeService } from '@core/internalS/change.service';
 
 @Component({
   selector: 'app-detail',
@@ -10,9 +11,13 @@ import { CountriesService } from '@core/service/countries.service';
 })
 export class DetailComponent implements OnInit {
 
+  public isDark = false;
+  logMode = JSON.parse(localStorage.getItem('mode'));
+
   constructor(
     private route: ActivatedRoute,
-    private service: CountriesService
+    private service: CountriesService,
+    private changeService: ChangeService
   ) { }
 
   ngOnInit(): void {
@@ -20,7 +25,28 @@ export class DetailComponent implements OnInit {
       const name = param.name
       console.log(name);
       this.getCountry(name)
-    })
+    });
+    this.mode();
+    this.validationLog();
+  }
+  validationLog() {
+    try {
+      if(this.logMode) {
+        this.isDark = true;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  mode() {
+    this.changeService.newModeAdd$
+    .subscribe(data => {
+      if(data === false) {
+        this.isDark = data;
+      }else if (data){
+        this.isDark = data;
+      };
+    });
   }
   getCountry(name:  string): void{
     this.service.getCountryForName(name)
