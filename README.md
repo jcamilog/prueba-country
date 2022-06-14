@@ -31,3 +31,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Solution of the challenge
 The challenge is solved using angular v13, with modular architecture to improve load performance, Dark mode connected throughout the application, through observers, for API consumption, Angular HTTP was used, the unit tests that were carried out were carried out with Karma
 
+## Architecture
+. The structure of Modules.
+. Organization of the Components.
+. Communication techniques between components
+. RxJS (Observables)
+. State Management or State Administration
+. Custom decorators, Pipes, among others.
+Principios SOLID
+. Single Responsibility Principle
+
