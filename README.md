@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Specifications
+
+## Solution of the challenge
+The challenge is solved using angular v13, with modular architecture to improve load performance, Dark mode connected throughout the application, through observers, for API consumption, Angular HTTP was used, the unit tests that were carried out were carried out with Karma
+
