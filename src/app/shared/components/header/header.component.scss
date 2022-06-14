@@ -1,18 +1,36 @@
-.content {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@import './../../../../assets/sass/class-global.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.change {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  p {
+    margin-left: 10px;
+  }
+}
+.cc {
+  border-bottom: 1px solid rgba(179, 169, 169, 0.5);
+  padding: 16px 32px;
+}
+.dkHeader {
+  background: $darkModeElements;
+  &.cc {
+    border: none;
+  }
+  h1,
+  h2,
+  h4,
+  p {
+    color: $darkModeText;
   }
   .change {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    p {
-      margin-left: 10px;
+    span {
+      color: #fff;
     }
-  }
-  &.cc {
-    border-bottom: 1px solid rgba(179, 169, 169, 0.5);
   }
 }

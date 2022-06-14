@@ -1,67 +1,24 @@
 @import './colors.scss';
+@import './mixins.scss';
 
 .content {
   padding: 16px;
+  height: 100%;
+  overflow-x: scroll;
 }
-.dkHeader {
-  background: $darkModeElements!important;
-  &.cc {
-    border: none!important;
-  }
-  h1,
-  h2,
-  h4,
-  p {
-    color: $darkModeText;
-  }
-  .change {
-    span {
-      color: #fff;
-    }
-  }
+h1,
+h2,
+h4,
+p {
+  color: $lightModeText;
 }
 .dark {
   background-color: $darkModeBackground;
-  .grid {
-    .card {
-      border: none!important;
-      background: $darkModeElements!important;
-      box-shadow: none!important;
-    }
-  }
-  .filters {
-    .search {
-      input{
-        background: $darkModeElements!important;
-        box-shadow: none!important;
-        border: none!important;
-      }::placeholder {
-        color: $darkModeText;
-      }
-      span {
-        color: $darkModeText;
-      }
-    }
-    .filter {
-      .panel {
-        background: $darkModeElements!important;
-        box-shadow: none!important;
-        border: none!important;
-        span {
-          color: $darkModeText;
-        }
-      }
-      .expancion {
-        background: $darkModeElements!important;
-        box-shadow: none!important;
-        border: none!important;
-      }
-    }
-  }
   h1,
   h2,
   h4,
-  p {
+  p,
+  span {
     color: $darkModeText;
   }
 }
@@ -70,6 +27,7 @@ h2 {
 }
 h1 {
   margin: 0;
+  font-size: 30px;
 }
 h4, p {
   margin:  0;

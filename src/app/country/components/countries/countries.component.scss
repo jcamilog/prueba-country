@@ -53,6 +53,7 @@
     gap: 32px;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     .card {
+      cursor: pointer;
       width: 260px;
       height: 334px;
       background: #FFFFFF;
@@ -78,6 +79,37 @@
             }
           }
         }
+      }
+    }
+  }
+}
+.dark {
+  .grid {
+    .card {
+      @include darkElements;
+    }
+  }
+  .filters {
+    .search {
+      input{
+        @include darkElements;
+        color: #FFFFFF;
+      }::placeholder {
+        color: $darkModeText;
+      }
+      span {
+        color: $darkModeText;
+      }
+    }
+    .filter {
+      .panel {
+        @include darkElements;
+        span {
+          color: $darkModeText;
+        }
+      }
+      .expancion {
+        @include darkElements;
       }
     }
   }

@@ -1,3 +1,53 @@
 <div class="content" [class.dark]="isDark" >
-  <p>detail works!</p>
+  <div class="button">
+    <a routerLink="/">
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+      <p>Back</p>
+    </a>
+  </div>
+  <div class="info">
+    <div class="card" *ngFor="let con of country">
+      <div class="image">
+        <img [src]="con.flag" [alt]="con.name">
+      </div>
+      <div class="info-cnt">
+        <h2 class="nameC">{{con.name}}</h2>
+        <div class="content-info">
+          <div class="col">
+            <span>
+              <h4>Native Name: </h4> <p> {{con.name}} </p>
+            </span>
+            <span>
+              <h4>Population: </h4><p> {{con.population}} </p>
+            </span>
+            <span>
+              <h4>Region: </h4><p> {{con.region}} </p>
+            </span>
+            <span>
+              <h4>Sub Region: </h4><p> {{ con.subregion }} </p>
+            </span>
+            <span>
+              <h4>Capital: </h4><p> {{con.capital}} </p>
+            </span>
+          </div>
+          <div class="col">
+            <span>
+              <h4>Top Level Domain: </h4> <p *ngFor="let top of con?.topLevelDomain"> {{top}}  </p>
+            </span>
+            <span>
+              <h4>Currencies: </h4> <p *ngFor="let curre of con?.currencies"> {{curre.name}} </p>
+            </span>
+            <span>
+              <h4>Languages: </h4> <p *ngFor="let lng of con?.languages"> {{lng.name}} </p>
+            </span>
+          </div>
+        </div>
+        <div class="footer-info">
+          <h4>Border Countries:</h4> <p *ngFor="let brd of con?.borders" > {{brd}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,8 @@
+@import './colors.scss';
+
+@mixin darkElements {
+  background: $darkModeElements;
+  box-shadow: none;
+  border: none;
+}
+

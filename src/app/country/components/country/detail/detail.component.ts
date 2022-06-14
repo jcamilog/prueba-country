@@ -12,6 +12,7 @@ import { ChangeService } from '@core/internalS/change.service';
 export class DetailComponent implements OnInit {
 
   public isDark = false;
+  country: any = [];
   logMode = JSON.parse(localStorage.getItem('mode'));
 
   constructor(
@@ -22,8 +23,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((param: any) => {
-      const name = param.name
-      console.log(name);
+      const name = param.name;
       this.getCountry(name)
     });
     this.mode();
@@ -50,11 +50,12 @@ export class DetailComponent implements OnInit {
   }
   getCountry(name:  string): void{
     this.service.getCountryForName(name)
-    .subscribe(data => {
-      console.log(data)
-    }, err => {
-      console.log(err);
-    })
+    .subscribe({
+      next: (data) => {
+        console.log(data);
+        this.country = data;
+      },
+      error: (error) => console.log(error)
+    });
   }
-
 }
