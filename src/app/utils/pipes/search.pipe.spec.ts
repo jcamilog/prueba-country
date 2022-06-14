@@ -1,6 +1,6 @@
 import { SearchPipe } from './search.pipe';
 
-describe('SearchPipe', () => {
+fdescribe('SearchPipe', () => {
   it('create an instance', () => {
     const pipe = new SearchPipe();
     expect(pipe).toBeTruthy();

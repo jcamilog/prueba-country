@@ -5,7 +5,7 @@ import { CountriesService } from './countries.service';
 import { environment } from './../../../environments/environment';
 import { HttpStatusCode } from '@angular/common/http';
 
-fdescribe('CountriesService', () => {
+describe('CountriesService', () => {
   let service: CountriesService;
   let httpController: HttpTestingController;
 

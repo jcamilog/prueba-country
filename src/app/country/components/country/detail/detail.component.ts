@@ -52,7 +52,6 @@ export class DetailComponent implements OnInit {
     this.service.getCountryForName(name)
     .subscribe({
       next: (data) => {
-        console.log(data);
         this.country = data;
       },
       error: (error) => console.log(error)
