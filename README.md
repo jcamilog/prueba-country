@@ -38,6 +38,6 @@ The challenge is solved using angular v13, with modular architecture to improve 
 . RxJS (Observables)
 . State Management or State Administration
 . Custom decorators, Pipes, among others.
-Principios SOLID
+Beginning SOLID
 . Single Responsibility Principle
 
